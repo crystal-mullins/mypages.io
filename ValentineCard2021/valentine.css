@@ -1,0 +1,145 @@
+main{
+    border: solid black;
+    
+    border-width: 10px;
+    border-width: 80%;
+    
+}
+body {
+    background-color: #cc9999;
+   
+  }
+  #heart {
+    position: relative;
+    width: 100px;
+    height: 175px;
+    background-color: #993333;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+    margin: 30px auto;
+    box-shadow: 0 0 10px 10px #ff6666;
+    padding-top: 10px;
+  }
+  
+  #heart:before {
+    position: absolute;
+    width: 175px;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-color: #990000;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 0 50px 50px 0;
+    box-shadow: 0 0 10px 10px #ff6666;
+  }
+  #heart:hover {
+    background-color: #990000;
+  }
+  
+  
+  #small_hearts {
+    verticle-align: middle;
+    color: #663333;
+    text-align: center;
+    font-size: 24px;
+    animation-name: small_hearts;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    position: relative;
+  }
+  @keyframes small_hearts {
+    0%   {color:#663333; left:0px; top:0px;}
+    25%  {color:#66000; left:100px; top:0px;}
+    50%  {color:#33000; left:200px; top:-230px;}
+    75%  {color:#cc0000; left:-150px; top:-230px;}
+    100% {color:#ff6666; left:0px; top:0px;}
+  }
+  #text {
+    text-align: center;
+    color: #330000; 
+    animation-name: text;
+    animation-duration: 20s;
+    animation-delay: 7s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    position: relative;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Calibri", sans-serif;
+  }
+  @keyframes text {
+     0%   {color:#660000; left:0px; top:0px; font-size:30px;}
+     25%  {color:#330000; left:300px; top:0px; font-size:15px;}
+     50%  {color:#cc0000; left:-300px; top:-200px; font-size:60px;}
+     75%  {color:#ff6666; left:200px; top:-200px; }
+    100%  {color:#660000; left:0px; top:0px;}
+  }
+  
+
+  /* second heart  */
+  h1 {
+    font-family: 'Pacifico', cursive;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 60px;
+    color: #660000;
+  }
+  
+  #wrappertwo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    animation:pulse 1s infinite;
+    margin: 50px auto;
+  }
+  #hearttwo {
+    background: #ff6666;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+    animation:pulsecolor 1s infinite;
+  }
+  
+  #hearttwo:before, #hearttwo:after{
+    position: absolute;
+    content:'';
+    right:50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ff6666;
+    animation:pulsecolor 1s infinite;
+  }
+  
+  #hearttwo:after{
+    right: 0px;
+    bottom:50px;
+  }
+  
+  @keyframes pulse{
+    10% {transform: scale(1.1)}
+    20% {transform: scale(1)}
+    30% {transform: scale(1.1)}
+  }
+  
+  @keyframes pulsecolor{
+    10% {background:#660000;}
+    30% {background:#660000;}
+  }
+
+  #musicbox {
+      position: absolute;
+      right:25%;
+  }
